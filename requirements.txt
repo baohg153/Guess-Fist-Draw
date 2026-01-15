@@ -1,3 +1,4 @@
-roboflow
+dotenv
 zipfile
 ultralytics
+opencv-python
