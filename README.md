@@ -13,13 +13,13 @@ Guess-Fist-Draw/
 │       └── valid/
 │
 ├── models/
-│   ├── fist/
-│   │   ├── model.py        # fist detection model
-│   │   ├── dataset.py
-│   │   └── train.py
+│   ├── fist/               # fist detection model
+│   │   ├── train.py
+│   │   ├── best.pt
+│   │   └── test.py
 │   │
-│   └── draw/
-│       ├── model.py        # draw classification model
+│   └── draw/               # draw classification model
+│       ├── model.py        
 │       ├── dataset.py
 │       └── train.py
 │
