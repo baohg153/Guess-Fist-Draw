@@ -1,4 +1,6 @@
 import os
+import shutil
+
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 from ultralytics import YOLO
@@ -14,6 +16,8 @@ def main():
         batch=16,
         device="cuda" if torch.cuda.is_available() else "cpu",
         patience=5,
+        project="checkpoints",
+        name="fist",
         exist_ok=True,
         save=True,
         workers=2
@@ -21,3 +25,4 @@ def main():
 
 if __name__ == "__main__":
     main()  
+    shutil.copy('checkpoints/fist/weights/best.pt', 'models/fist/best.pt')
